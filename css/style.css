@@ -230,12 +230,13 @@ h2 {
     color: #000;
     font-size: 1em;
     pointer-events: none;
-    transition: .5s;
+    visibility: hidden;
 }
 
 input:focus ~ label,
 input:focus ~:valid{
     top: -5px;
+    visibility: visible;
 }
 
 .input-box input{
@@ -248,6 +249,10 @@ input:focus ~:valid{
     padding: 0 35px 0 5px;
     color: #000;
 }
+.input-box input::placeholder {
+    color: #000;
+  }
+
 
 .input-box ion-icon{
     position: absolute;
@@ -265,6 +270,7 @@ input:focus ~:valid{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
 
 .forget label input{
